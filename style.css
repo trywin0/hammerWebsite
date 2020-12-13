@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "Adequate";
+  src: url("fonts/Adequate-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Akrobat";
+  src: url("fonts/Akrobat-Black.ttf");
+}
+@font-face {
+  font-family: "BitterPro-Bold";
+  src: url("fonts/BitterPro-Bold.ttf");
+}
+@font-face {
+  font-family: "BitterPro-Thin";
+  src: url("fonts/BitterPro-Thin.ttf");
+}
+@font-face {
+  font-family: "BitterPro-Medium";
+  src: url("fonts/BitterPro-Medium.ttf");
+}
+@font-face {
+  font-family: "Uni Sans Heavy";
+  src: url("fonts/Uni Sans Heavy.otf");
+}
+@font-face {
+  font-family: "Uni Sans Thin";
+  src: url("fonts/Uni Sans Thin.otf");
+}
+
+html,
+body {
+  background-color: #28292c;
+  height: 140%;
+}
+
+.topnav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 18px;
+  left: 190px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-color: #5d82cc;
+  border: transparent;
+  border-bottom-right-radius: 20px;
+  max-width: max-content;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  position: sticky;
+
+  border: transparent;
+  border-bottom-right-radius: 20px;
+  float: left;
+  color: #d4d4d4;
+  font-family: "Uni Sans Heavy";
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-shadow: 1px 1px rgb(141, 143, 243);
+}
+
+body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #6e9eff;
+  color: rgb(206, 218, 251);
+  text-shadow: 1px 2px #93a8e7;
+}
+
+/* Add a color to the active/current link */
+#hammerbtn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 370px;
+  height: 85px;
+  padding-left: 25px;
+  border: transparent;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Uni Sans Heavy";
+  cursor: pointer;
+  color: rgb(251, 251, 251);
+  background: #5d82cc;
+  animation-name: jump;
+  animation-duration: 0.5s;
+}
+
+#stars {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 16rem;
+  height: 100vh;
+  z-index: 1;
+}
+#topbtn {
+  display: none;
+  opacity: 0;
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  width: 150px;
+  text-align: center;
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(67, 116, 172); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  animation: fadein;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-timing-function: runanim;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+#topbtn:hover {
+  background-color: rgb(
+    104,
+    134,
+    168
+  ); /* Add a dark-grey background on hover */
+}
+/*
+#hammerhead {
+  position: static;
+  left: 52.7%;
+  top: 8.9%;
+  width: 20.1%;
+  opacity: 100%;
+  color: #ffffff;
+  display: none;
+  -webkit-transform: rotate(90deg) scaleX(-1);
+  transform: rotate(90deg) scaleX(-1);
+  filter: brightness(0) invert(0.9);
+  animation: fadein;
+  animation-duration: 4s;
+  animation-direction: normal;
+  animation-timing-function: runanim;
+}
+*/
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 370px;
+  height: 85px;
+  padding-left: 25px;
+  border: transparent;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Uni Sans Heavy";
+  cursor: pointer;
+  color: rgb(251, 251, 251);
+  background: #5d82cc;
+}
+
+@keyframes jump {
+  0% {
+    top: 20%;
+  }
+  60% {
+    top: 17%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #000000c5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(137, 138, 148);
+  border: transparent;
+  border-radius: 10px;
+  /* outline: 1px solid slategrey;*/
+}
+#addtext {
+  padding-left: 10px;
+  position: relative;
+}
+#bigname {
+  position: relative;
+  top: 300px;
+  color: #ffffff;
+  font-family: "Uni Sans Heavy";
+  text-align: center;
+  font-size: 65px;
+  -webkit-text-stroke: 2px rgb(52, 53, 85);
+}
+#shortdesc {
+  position: relative;
+  top: 280px;
+  color: #afafaf;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 25px;
+}
+#whytouse {
+  position: relative;
+  top: 700px;
+  color: #6e9eff;
+  font-family: "BitterPro-Bold";
+  text-align: center;
+  font-size: 80px;
+  -webkit-text-stroke: 1.5px black;
+}
+
+#description {
+  word-spacing: 5px;
+  letter-spacing: 0.7px;
+  max-width: 500px;
+  position: relative;
+  list-style-type: none;
+  font-size: 25px;
+  left: 530px;
+  top: 660px;
+  color: #e1ebff;
+  font-family: "BitterPro-Medium";
+  font-variant: normal;
+  line-height: 35px;
+}
+
+#about {
+  position: relative;
+  font-size: 20px;
+  left: 35.5%;
+  color: #e1ebff;
+  font-family: "Adequate";
+  font-variant: normal;
+  line-height: 35px;
+  padding-inline: 30px;
+}
